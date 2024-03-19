@@ -14,10 +14,9 @@ public class Maximot {
 	private static final Scanner SCANNER = new Scanner(System.in);
 	private static final Random RANDOM = new Random();
 	private static final int MAX_TRIES = 5;
-	
+
 	private static int numberOfPoints = 50;
 	private static String selectedWord;
-
 
 	private static List<String> loadWords(String filePath) {
 		try (Stream<String> stream = Files.lines(Paths.get(filePath))) {
@@ -108,18 +107,18 @@ public class Maximot {
 	}
 
 	private static boolean askToPlayAgain() {
-	    while (true) {
-	        System.out.println("Wanna play again? (type 'yes' or 'no')");
-	        String userInput = SCANNER.nextLine().trim().toLowerCase();
-	        switch (userInput) {
-	            case "yes":
-	                return true;
-	            case "no":
-	                return false;
-	            default:
-	                System.out.println("Invalid input. Please type 'yes' or 'no'.");
-	        }
-	    }
+		while (true) {
+			System.out.println("Wanna play again? (type 'yes' or 'no')");
+			String userInput = SCANNER.nextLine().trim().toLowerCase();
+			switch (userInput) {
+			case "yes":
+				return true;
+			case "no":
+				return false;
+			default:
+				System.out.println("Invalid input. Please type 'yes' or 'no'.");
+			}
+		}
 	}
 
 	public static void main(String[] args) {
