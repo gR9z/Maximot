@@ -74,7 +74,6 @@ public class Maximot {
 			if (guessedCorrectly) {
 				break;
 			}
-
 		}
 
 		return guessedCorrectly;
